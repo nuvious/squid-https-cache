@@ -2,6 +2,8 @@
 
 A quick recipe for making a squid https proxy for all or specific domains.
 
+**WARNING** This implementation is very basic and has an `allow all` clause instead of specific ports. This was done in testing and will be removed in later itterations. This is proof-of-concept code; please regard it as such.
+
 ## Quick Start
 
 ### Generate Certs
