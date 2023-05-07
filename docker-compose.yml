@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./squid.conf:/etc/squid/squid.conf
+      - ./squid-ca-cert-key.pem:/etc/squid/certs/squid-ca-cert-key.pem
+      - PATH_TO_CACHE_STORAGE:/var/spool/squid/data
+      - ./cachelist.txt:/etc/squid/cachelist.txt
+      - ./splicelist.txt:/etc/squid/splicelist.txt
